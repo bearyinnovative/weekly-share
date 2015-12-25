@@ -28,7 +28,7 @@
 ** Zombi fungi
 
 #+ATTR_REVEAL: :frag roll-in
-[[./images/CORDYCEPS-02.jpg]]
+[[./images/Cordyceps-02.jpg]]
 
 
 * Spores
