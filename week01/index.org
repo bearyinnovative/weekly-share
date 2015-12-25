@@ -1,0 +1,75 @@
+#+Title: Fungi 2015
+#+Author: stwind
+#+Email: stwind@bearyinnovative.com
+
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: toc:0
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: default
+#+REVEAL_THEME: moon
+#+REVEAL_HLEVEL: 1
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Fungi.">
+#+REVEAL_ROOT: ./reveal.js
+
+* Geastrum britannicum
+
+#+ATTR_REVEAL: :frag roll-in
+[[./images/Geastrumbritannicum.jpg]]
+
+** Rayed Earthstar
+#+ATTR_REVEAL: :frag roll-in
+[[./images/geastrum.quadrifidum.jb.jpg]]
+
+* Cordyceps
+
+** Zombi fungi
+
+#+ATTR_REVEAL: :frag roll-in
+[[./images/CORDYCEPS-02.jpg]]
+
+
+* Spores
+  :PROPERTIES:
+  :reveal_background: ./images/spores.jpg
+  :END:
+
+* Fusarium oxysporum
+
+  #+ATTR_REVEAL: :frag roll-in
+  [[./images/Fusarium-01.jpg]]
+
+** Silient Assassin
+   #+ATTR_REVEAL: :frag roll-in
+   Banana Killer
+
+   #+ATTR_REVEAL: :frag roll-in
+   [[./images/Fusarium-02.jpg]]
+
+* Yeast
+  #+ATTR_REVEAL: :frag roll-in
+  [[./images/yeast-01.jpg]]
+
+** Bread
+   :PROPERTIES:
+   :reveal_background: ./images/bread.jpg
+   :END:
+
+** CRISPR
+   #+ATTR_REVEAL: :frag roll-in
+   [[./images/crispr.jpg]]
+
+** Spider Silk
+[[./images/Yeast-02.jpg]]
+
+** Morphine
+:PROPERTIES:
+:reveal_background: ./images/Yeast-03.jpg
+:reveal_background_trans: slide
+:END:
+
+* Thank You
+
+Merry Christmas
