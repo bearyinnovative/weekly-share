@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Code Review</title>
+<meta name="author" content="(xtang)"/>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/solarized.css" id="theme"/>
+<link rel="stylesheet" href=""/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Fungi.">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-markdown>
+  <script type="text/template">
+# Code Review
+## xtang
+### 2016.02.26
+  </script>
+</section>
+
+<section>
+  <section data-markdown>
+    <script type="text/template">
+      ## 什么是 Code Review
+![](http://i.imgur.com/iRNYBcw.png)
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+
+- Code review is systematic examination (sometimes referred to as peer review) of computer source code.
+
+- It is intended to find mistakes overlooked in the initial development phase, improving the overall quality of software.
+
+- Reviews are done in various forms such as pair programming, informal walkthroughs, and formal inspections.
+[wiki][1]
+
+[1]: https://en.wikipedia.org/wiki/Code_review "Code_review"
+    </script>
+  </section>
+</section>
+<section>
+    <section data-markdown>
+      <script type="text/template">
+    ## Code Review 问题
+![](http://i.imgur.com/78hizHx.gif)
+      </script>
+    </section>
+    <section data-markdown>
+      <script type="text/template">
+- 时间成本
+
+- 水平差异
+      </script>
+    </section>
+</section>
+<section>
+  <section data-markdown>
+    <script type="text/template">
+    ## 为什么要做 Code Review
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+
+- 及早暴露问题，拒绝 Test on Prod
+
+- 传递知识
+
+- 新同事快速融入，成长
+
+- 保持团队技术氛围
+
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+Capers Jones' ongoing analysis of over 12,000 software development projects showed that:[wiki][1]
+
+ - The latent defect discovery rate of formal inspection is in the 60-65% range.
+
+ - For informal inspection, the figure is less than 50%.
+
+ - The latent defect discovery rate for most forms of testing is about 30%.
+
+[1]: https://en.wikipedia.org/wiki/Code_review
+    </script>
+  </section>
+</section>
+
+<section>
+  <section data-markdown>
+    <script type="text/template">
+      ## 怎么做 Code Review
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+      ### Over-the-shoulder
+![](http://i.imgur.com/gGwno33.gif)
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+      ### Email pass-around
+<a href="http://i.imgur.com/2SvpTAA.mp4" target="_blank">too oooldd</a>
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+      ## Pair programming
+<a href="https://www.youtube.com/watch?v=dYBjVTMUQY0" target="_blank">Pair Programming</a>
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+      ## GitHub + BearyChat
+    </script>
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    <script type="text/template">
+      ## Code Review 的建议
+    </script>
+  </section>
+  <section data-markdown>
+    <script type="text/template">
+- Merge 之前做 Review
+
+- 单元测试通过之后做 Review
+
+- 通常用 GitHub 来 Review，必要时面对面
+
+- Review 的代码尽量在 200 ~ 400 行之间，这样可以在 1 个小时以内看完
+
+- Review 功能要写明，代码要可读
+
+- 先找逻辑问题，再找风格问题
+
+- 避免过多争论主观意向很强的内容
+    </script>
+  </section>
+</section>
+<!--section data-markdown>
+  <script type="text/template">
+    ## 我用过的工具
+- Java Code Review (有道)
+- Rietveld - SVN（阿里）
+- Gerrit - 私有 Git Code Review（AVOS）
+- Phabricator - 项目管理 + Code Review + 文档 (AVOS)
+- GitHub (AVOS & BearyChat)
+  </script>
+</section-->
+<section data-markdown>
+  ## Thank You
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: true,
+rollingLinks: true,
+keyboard: true,
+overview: true,
+margin: 0.10,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
